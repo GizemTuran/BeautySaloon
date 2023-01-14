@@ -1,0 +1,55 @@
+﻿@model BeautySaloon.Models.User
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+
+}
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/Content/Login.css">
+</head>
+
+<ul class="navbar">
+    <li><img id="img" src="/Images/beautysalon.png"></li>
+    <li><a class="active" href="~/Home/Contact">Contact</a></li>
+    <li><a class="active" href="~/Home/Appointment">Appointment</a></li>
+    <li><a class="active" href="~/Home/Social">Social Media</a></li>
+    <li><a class="active" href="~/Home/Oursalon">Our Saloon</a></li>
+    <li><a class="active" href="~/Home/Home">Home</a></li>
+    <li><a class="active" href="~/Home/Login">Login</a></li>
+    <li><a class="active" href="~/Home/Signup">Sign Up</a></li>
+</ul>
+<h2>LOGIN</h2>
+<img class="user_logo" src="~/Images/User_Avatar.png" />
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+{
+    <div class="login">
+        <ul class="login_ul">
+            <li>
+                @Html.TextBoxFor(m => Model.Name, new { @class = "form-control", @placeholder = "name" })
+            </li>
+            <li>
+                @Html.TextBoxFor(m => Model.Password, new { @class = "form-control", @placeholder = "password" })
+            </li>
+            <!--<li>
+        <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe">Remember me</label>
+    </li>-->
+            <br />
+            <li>
+                @Html.LabelFor(model => model.Rememberme)
+                @Html.CheckBoxFor(model => model.Rememberme)
+            </li>
+            <li>
+                <button type="submit" class="btn">Submit</button>
+                @Html.Raw(TempData["msg"])
+            </li>
+        </ul>
+    </div>
+}
+
+<div class="bcon">
+    
+    <br />
+</div>
+</html>

@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = null;
+}
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/Content/Home.css">
+</head>
+<body>
+    <ul class="navbar">
+        <li><img id="img" src="/Images/beautysalon.png"></li>
+        <li><a class="active" href="~/Home/Contact">Contact</a></li>
+        <li><a class="active" href="~/Home/Appointment">Appointment</a></li>
+        <li><a class="active" href="~/Home/Social">Social Media</a></li>
+        <li><a class="active" href="~/Home/Oursalon">Our Saloon</a></li>
+        <li><a class="active" href="~/Home/Home">Home</a></li>
+        <li><a class="active" href="~/Home/Login">Login</a></li>
+        <li><a class="active" href="~/Home/Signup">Sign Up</a></li>
+</ul>
+    <div class="row">
+        <div class="column1">
+            <ul class="sidebar_left">
+                <li><a class="active" href="~/Home/Contact">Contact</a></li>
+                <li><a class="active" href="~/Home/Appointment">Appointment</a></li>
+                <li><a class="active" href="~/Home/Social">Social Media</a></li>
+                <li><a class="active" href="~/Home/Oursalon">Our Saloon</a></li>
+                <li><a class="active" href="~/Home/Home">Home</a></li>
+            </ul>
+        </div>
+        <div class="column2">
+            <h2>Welcome @Session["Name"]</h2>
+            <img class="beauty" src="/Images/beauty.jpg">
+            <p class="imgtext">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus obcaecati esse quasi, rerum illo, ad eius saepe officia harum neque libero earum dolores magni deleniti corporis vel recusandae assumenda minus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus obcaecati esse quasi, rerum illo, ad eius saepe officia harum neque libero earum dolores magni deleniti corporis vel recusandae assumenda minus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus obcaecati esse quasi, rerum illo, ad eius saepe officia harum neque libero earum dolores magni deleniti corporis vel recusandae assumenda minus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus obcaecati esse quasi, rerum illo, ad eius saepe officia harum neque libero earum dolores magni deleniti corporis vel recusandae assumenda minus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus obcaecati esse quasi, rerum illo, ad eius saepe officia harum neque libero earum dolores magni deleniti corporis vel recusandae assumenda minus.
+            </p>
+        </div>
+    </div>
+    <hr class="solid">
+    <footer id="footer">
+        <p>CSE5001 IKU WEB PROGRAMMING 2022</p>
+    </footer>
+</body>
+</html>

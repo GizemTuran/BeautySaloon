@@ -1,0 +1,53 @@
+﻿@model BeautySaloon.Models.AppointmentInfoModel
+@{
+    ViewBag.Title = "Appointment";
+    Layout = null;
+}
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/Content/Appointment.css">
+</head>
+<body>
+    <ul class="navbar">
+        <li><img id="img" src="/Images/beautysalon.png"></li>
+        <li><a class="active" href="~/Home/Contact">Contact</a></li>
+        <li><a class="active" href="~/Home/Appointment">Appointment</a></li>
+        <li><a class="active" href="~/Home/Social">Social Media</a></li>
+        <li><a class="active" href="~/Home/Oursalon">Our Saloon</a></li>
+        <li><a class="active" href="~/Home/Home">Home</a></li>
+    </ul>
+    <div class="row">
+        <div class="column1">
+            <ul class="sidebar_left">
+                <li><a class="active" href="~/Home/Contact">Contact</a></li>
+                <li><a class="active" href="~/Home/Appointment">Appointment</a></li>
+                <li><a class="active" href="~/Home/Social">Social Media</a></li>
+                <li><a class="active" href="~/Home/Oursalon">Our Saloon</a></li>
+                <li><a class="active" href="~/Home/Home">Home</a></li>
+            </ul>
+        </div>
+        @using (Html.BeginForm("Appointment", "Home", FormMethod.Post))
+        {
+            <div class="column2">
+                <h1>Appointments</h1>
+                <li class="ddown1">@Html.DropDownListFor(m => m.selectedItem, (IEnumerable<SelectListItem>)ViewBag.operationlist , "Please select operation..")</li>
+                <li class="ddown2">
+                    @Html.EditorFor(model => model.date, new { htmlAttributes = new { @class = "calender", type = "date" } })
+                    <!-- <form action="~/Content/Appointment.css">
+     <label for="calender">Calender:</label>
+     <input type="date" id="calender" name="calender">
+                        </form>
+    -->
+                    <br /><br />
+                    <button type="submit" class="submit_btn">Submit</button>
+                </li>
+            </div>
+        }
+        </div>
+    <hr class="solid">
+    <footer id="footer">
+        <p>CSE5001 IKU WEB PROGRAMMING 2022</p>
+    </footer>
+</body>
+</html>

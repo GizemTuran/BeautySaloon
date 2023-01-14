@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Contact";
+    Layout = null;
+}
+<html>
+<head>
+    <link rel="stylesheet" href="~/Content/Contact.css">
+</head>
+<body>
+    <ul class="navbar">
+        <li><img id="img" src="/Images/beautysalon.png"></li>
+        <li><a class="active" href="~/Home/Contact">Contact</a></li>
+        <li><a class="active" href="~/Home/Appointment">Appointment</a></li>
+        <li><a class="active" href="~/Home/Social">Social Media</a></li>
+        <li><a class="active" href="~/Home/Oursalon">Our Saloon</a></li>
+        <li><a class="active" href="~/Home/Home">Home</a></li>
+    </ul>
+    <div class="row">
+        <div class="column1">
+            <ul class="sidebar_left">
+                <li><a class="active" href="~/Home/Contact">Contact</a></li>
+                <li><a class="active" href="~/Home/Appointment">Appointment</a></li>
+                <li><a class="active" href="~/Home/Social">Social Media</a></li>
+                <li><a class="active" href="~/Home/Oursalon">Our Saloon</a></li>
+                <li><a class="active" href="~/Home/Home">Home</a></li>
+            </ul>
+        </div>
+        <div class="column2">
+            <h1>Contact Us</h1>
+            <form action="contact.html">
+                <input type="text" placeholder="Name" id="name" name="name"><br>
+                <!--<label for="mail">e-Mail</label>-->
+                <input type="text" placeholder="Mail" id="mail" mail="mail"><br>
+                <textarea name="message" id="message">Your message</textarea><br><br>
+                <button>Send</button>
+            </form>
+        </div>
+        </div>
+        <hr class="solid">
+        <footer id="bottomfooter">
+            <p>CSE5001 IKU WEB PROGRAMMING 2022</p>
+        </footer>
+</body>
+</html>

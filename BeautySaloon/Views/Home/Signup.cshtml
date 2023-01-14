@@ -1,0 +1,52 @@
+﻿@model BeautySaloon.Models.User
+@{
+    ViewBag.Title = "Signup";
+    Layout = null;
+}
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/Content/Signup.css">
+</head>
+<ul class="navbar">
+    <li><img id="img" src="/Images/beautysalon.png"></li>
+    <li><a class="active" href="~/Home/Contact">Contact</a></li>
+    <li><a class="active" href="~/Home/Appointment">Appointment</a></li>
+    <li><a class="active" href="~/Home/Social">Social Media</a></li>
+    <li><a class="active" href="~/Home/Oursalon">Our Saloon</a></li>
+    <li><a class="active" href="~/Home/Home">Home</a></li>
+    <li><a class="active" href="~/Home/Login">Login</a></li>
+    <li><a class="active" href="~/Home/Signup">Sign Up</a></li>
+</ul>
+<div class="roundedframe">
+    <h2>SIGN UP</h2>
+    <img class="user_logo" src="~/Images/User_Avatar.png" />
+    @using (Html.BeginForm("Signup", "Home", FormMethod.Post))
+    {
+        <div class="signup">
+            <ul class="signup_ul">
+                <li>
+                    @Html.TextBoxFor(m => Model.Name, new { @class = "form-control", @placeholder = "name" })
+                </li>
+                <li>
+                    @Html.TextBoxFor(m => Model.Email, new { @class = "form-control", @placeholder = "email" })
+                </li>
+                <li>
+                    @Html.TextBoxFor(m => Model.Password, new { @class = "form-control", @placeholder = "password" })
+
+                </li>
+                <br />
+                <li>
+                    <button type="submit" class="btn">Submit</button>
+                </li>
+            </ul>
+        </div>
+    }
+</div>
+   @if (null != TempData["alertMessage"])
+    {
+        <script type="text/javascript">
+        alert("@TempData["alertMessage"]");
+        </script>
+    }
+</html>
